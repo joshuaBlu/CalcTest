@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css"type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="card cardMain w-75 p-3" style="width: 18rem;" id="myDivMain">
+    <div class="card-body rounded">
+      <h3 class="card-title">Tutor Rating</h3>
+      <h6 class="card-subtitle mb-2 text-muted">Calculate your pay</h6>
+
+
+
+
+  <div class="input-group mb-3 input1">
+  <div class="input-group-prepend">
+    <label class="input-group-text qBox" for="inputGroupSelect01">Education qualifications NQF level</label>
+  </div>
+
+
+
+  <select  class="custom-select custom-selectAlt" id="inputGroupSelect01">
+    <option value="0" selected>Choose...</option>
+    <option value="1">Matric</option>
+    <option value="2">Undergraduate (passed 1st year)</option>
+    <option value="3">Undergraduate (passed 2st year)</option>
+    <option value="6">Bachelor degree</option>
+    <option value="6">Higher Diploma in Education </option>
+    <option value="8">PGCE</option>
+    <option value="8">Honours degree</option>
+    <option value="9">Masters degree</option>
+    <option value="10">Doctoral degree</option>
+  </select>
+
+</div>
+<div class="input-group mb-3 input2">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect02">Years of teaching experience</label>
+  </div>
+  <select class="custom-select custom-selectAlt" id="inputGroupSelect02">
+    <option value="0" selected>Choose...</option>
+    <option value="0">Less than 1 year</option>
+    <option value="1">1 to 2 years</option>
+    <option value="2">2 to 3 years</option>
+    <option value="3">more than 3 years</option>
+    <option value="4">More than 10 years</option>
+    <option value="5">More than 20 years</option>
+  </select>
+</div>
+<div class="input-group mb-3 input2">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect03">Years of online tutoring experience</label>
+  </div>
+  <select class="custom-select custom-selectAlt" id="inputGroupSelect03">
+    <option value="0" selected>Choose...</option>
+    <option value="0">Less than 1 year</option>
+    <option value="1">1 to 2 years</option>
+    <option value="2">2 to 3 years</option>
+    <option value="3">more than 3 years</option>
+    <option value="4">more than 5 years</option>
+  </select>
+</div>
+<br>
+
+<div class="row">
+
+
+ <div class="form-group name1 col-md-6 bottomDivs">
+   <div class="input-group mb-3 input2">
+     <div class="input-group-prepend">
+       <label class="input-group-text" for="inputGroupSelect04">Additional skills 1 point for each option</label>
+     </div>
+
+     <select class="custom-select selectBottom custom-selectAlt" id="inputGroupSelect04">
+       <option value="0" selected>Choose...</option>
+       <option value="1">One</option>
+       <option value="2">Two</option>
+       <option value="3">Three</option>
+       <option value="4">four</option>
+       <option value="5">five</option>
+     </select>
+   </div>
+   </div>
+
+
+
+ <div class="form-group name1 col-md-6 bottomDivs">
+   <div class="input-group mb-3 input2">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect05">ACT Courses</label>
+  </div>
+  <select class="custom-select selectBottom custom-selectAlt" id="inputGroupSelect05">
+    <option value="0" selected>Choose...</option>
+    <option value="1">ACT-VAX course</option>
+    <option value="2">ACT-Vax & DPI course</option>
+    <option value="3">ACT-DP | ACT-BL</option>
+  </select>
+</div>
+</div>
+ </div>
+
+ <button type="button" id="button1" class = "button btn btn-light btn-lg">Calculate</button>
+<br>
+<br>
+<div class="card-body crdColor rounded" id="mydiv" >
+
+
+
+
+    <div id="mydiv-container">
+        <div id="mydiv-content">
+
+<h1 class="estPay">Estimated pay</h1>
+<h3> <p id="demo"></p></h3>
+            <br>
+<!-- <a href="#" onclick="hide('mydiv')">Close</a> -->
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+      <!-- <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a> -->
+    </div>
+  </div>
+
+
+<!--
+</div>
+</form>
+</div>
+<div class="col-md-8 order-md-1">
+<h4 class="mb-3">Billing address</h4>
+<form class="needs-validation" novalidate>
+<div class="row">
+<div class="col-md-6 mb-3">
+<label for="firstName">First name</label>
+<input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+<div class="invalid-feedback">
+  Valid first name is required.
+</div>
+</div>
+<div class="col-md-6 mb-3">
+<label for="lastName">Last name</label>
+<input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+<div class="invalid-feedback">
+  Valid last name is required.
+</div>
+</div>
+</div>
+
+<div class="mb-3">
+<label for="username">Username</label>
+<div class="input-group">
+<div class="input-group-prepend">
+  <span class="input-group-text">@</span>
+</div>
+<input type="text" class="form-control" id="username" placeholder="Username" required>
+<div class="invalid-feedback" style="width: 100%;">
+  Your username is required.
+</div>
+</div>
+</div>
+
+<div class="mb-3">
+<label for="email">Email <span class="text-muted">(Optional)</span></label>
+<input type="email" class="form-control" id="email" placeholder="you@example.com">
+<div class="invalid-feedback">
+Please enter a valid email address for shipping updates.
+</div>
+</div> -->
+
+
+
+
+<!-- <div class="input-group mb-3 input1">
+        <nobr>
+          <div class="inputF">
+        <input type="text" name="height" id="input1">Height (cm)</input>
+                  <input type="text" name="weight" id="input2">Weight (Kg)</input>
+                  </div>
+                  </nobr>
+
+                  </div>
+
+              <nobr>
+              <input type="text" name="height" id="input1">Height (cm)</input>
+                        <input type="text" name="weight" id="input2">Weight (Kg)</input>
+                        </nobr>
+              <br>
+              <button type="button" id="button1" class = "button">Calculate</button> -->
+
+
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="main.js" charset="utf-8"></script>
+</html>
